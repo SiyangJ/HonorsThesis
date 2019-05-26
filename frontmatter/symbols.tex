@@ -1,0 +1,44 @@
+\phantomsection
+\addcontentsline{toc}{chapter}{LIST OF SYMBOLS}
+
+\begin{center}
+{\Large \textbf{LIST OF SYMBOLS}}
+\end{center}
+
+\newcommand{\Sym}[2]{\noindent  #1 \> #2 \\}
+\newcommand{\Symi}[2]{\noindent #1 \hspace{1.5cm} \= #2 \\}
+
+\begin{tabbing}
+
+\Symi{$\alpha$}{Albedo, the percentage of solar radiation reflected back}
+\Sym{$\am$}{Maximum attainable albedo}
+\Sym{$C(\RR^n,\RR^m)$}{Continuous function from $\RR^n$ to $\RR^m$}
+\Sym{$\meps$}{The uncertainty in model}
+\Sym{$\meta$}{The uncertainty in observation operator}
+\Sym{$\cH$}{Observation operator}
+\Sym{$\mH$}{The linearization or matrix form of $\cH$}
+\Sym{$\hml$}{Machine learning observation operator with realistic training data}
+\Sym{$\hmlhat$}{Benchmark machine learning observation operator with unrealistically large amount of training data}
+\Sym{$\hretrieval$}{Observation operator representing the proxy for satellite retrieval algorithm}
+\Sym{$\hsparser$}{Machine learning observation operator with $5\%$ data in $E\in[-50,50]$ for training.}
+\Sym{$\hsparse$}{Machine learning observation operator with $30\%$ data in $E\in[-50,50]$ for training.}
+\Sym{$I_n$}{The identity mapping in $C(\RR^n,\RR^n)$}
+\Sym{$\mK$}{The Kalman gain matrix}
+\Sym{$\cM$}{The dynamic model used in data assimilation}
+\Sym{$\mM$}{The linearization or matrix form of $\cM$}
+\Sym{$\cN(\bm{\mu},\bm{\sigma})$}{Normal distribution with mean $\bm{\mu}$ and error covariance matrix $\bm{\sigma}$.}
+\Sym{$\mP$}{The covariance matrix representing the uncertainty in state estimate}
+\Sym{$\mQ$}{The covariance matrix representing the uncertainty in model}
+\Sym{$\mR$}{The covariance matrix representing the uncertainty in observation}
+\Sym{$\mxi$}{The error of machine learning observation operator.}
+\Sym{$\mx$}{The state vector, in our study is $2$-dimensional containing $E$ and $\am$.}
+\Sym{$\mx^f$}{The forecast estimate of the state.}
+\Sym{$\mx^{f_i}$}{The forecast estimate of the $i$-th ensemble member.}
+\Sym{$\mx^a$}{The analysis estimate of the state.}
+\Sym{$\my$}{The observation vector, in our study is $5$-dimensional representing the satellite radiances.}
+\Sym{$\my^{f_i}$}{The forecast estimate of the $i$-th ensemble member.}
+
+
+\end{tabbing}
+
+\clearpage

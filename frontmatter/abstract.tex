@@ -1,0 +1,41 @@
+%The word ÒAbstractÓ should be centered 2? below the top of the page. 
+%Skip one line, then center your name followed by the title of the 
+%thesis/dissertation. Use as many lines as necessary. Centered below the 
+%title include the phrase, in parentheses, Ò(Under the direction of  
+%_________)Ó and include the name(s) of the dissertation advisor(s).
+%Skip one line and begin the content of the abstract. It should be 
+%double-spaced and conform to margin guidelines. An abstract should not 
+%exceed 150 words for a thesis and 350 words for a dissertation. The 
+%latter is a requirement of both the Graduate School and UMI's 
+%Dissertation Abstracts International.
+%Because your dissertation abstract will be published, please prepare and 
+%proofread it carefully. Print all symbols and foreign words clearly and 
+%accurately to avoid errors or delays. Make sure that the title given at 
+%the top of the abstract has the same wording as the title shown on your 
+%title page. Avoid mathematical formulas, diagrams, and other 
+%illustrative materials, and only offer the briefest possible description 
+%of your thesis/dissertation and a concise summary of its conclusions. Do 
+%not include lengthy explanations and opinions.
+%The abstract should bear the lower case Roman number ii (if you did not 
+%include a copyright page) or iii (if you include a copyright page).
+
+\begin{center}
+\vspace*{52pt}
+{\Large \textbf{ABSTRACT}}
+\vspace{11pt}
+
+\begin{singlespace}
+Siyang Jing: Data assimilation with a machine learned observation operator \\
+and application to the assimilation of satellite data for sea ice models\\
+In collaboration with Dr. Christian Sampson\\
+Under the direction of Prof. Christopher Jones
+\end{singlespace}
+\end{center}
+
+Data assimilation embodies a wide variety of techniques used to combine model output and real-world observations in an optimal way to estimate the true state of a system. Important to all data assimilation schemes are the model $\cM$ used to evolve physical state variables forward in time, and the observation operator $\cH$ used to map those state variables to observed quantities. Ideally, the observed quantities are the state variables themselves in which case $\cH$ is simply a projection. However, in practice, this may not be the case. In many cases, the relationship between the physical state variables and the observed quantities can be very complex and highly nonlinear. An example is the case of passive microwave satellite observations of sea ice. Sea ice plays a vital role in the Earth's climate system and is a focus of both remote sensing and modeling efforts in modern times. Passive microwave radiometry provides a daily picture of the ice, despite persistent Arctic cloud cover, at a low resolution of 25km. While one cannot resolve many ice features in this data set, the concentration of ice in a given 25km pixel may be derived from the intensities of observed microwaves at various frequencies. Sea ice is far more emissive in the microwave spectrum than open water and that contrast can be exploited to estimate sea ice concentration. The emissivity of the ice depends on its temperature, bulk salinity, thickness, and its snow cover. Further, the microwaves must pass through the atmosphere producing noise in the observed signal. The map from sea ice state variables to observable microwave intensities is thus very difficult to model. 
+
+\par More empirical methods can obtain concentrations; the NASA TEAM 2 algorithm is an example. Given the frequent observations possible with passive microwave, the long 30-year record sea ice concentration derived from these observations is an enticing data set for assimilation into large-scale sea ice models. In addition, sea ice concentration is a sea ice state variable allowing for a simple projection type observation operator. However, in the summertime, sea ice concentration retrievals can be inaccurate due to the presence of melt ponds, which are ponds that form atop the ice from melting snow. These ponds block the microwave signature from the ice below them making it appear as though there is less ice leading to an underestimation of sea ice concentration. Assimilation of this data could be detrimental. However, one could avoid the issue by instead using an observation operator which maps the sea ice state, which can include the ponds, directly to the satellite radiances. This way if the model is in line with the radiances themselves we avoid assimilation of incorrect data. 
+
+\par As stated, this relationship is complicated and computationally expensive to model. We propose to that end to machine learn the observation operator that takes ice state to satellite radiances. In this initial study, we use a simplified proxy model of sea ice that mimics ponding behavior as an experimental test bed. Using our model we generate a training data set from the state variables and non-injective functions which produce ``observed radiances". We explore the amount of data needed to train the operator to obtain successful assimilations with an Ensemble Kalman Filter scheme. We compare our results to using retrieved concentration values which suffer from the pond masking effect. We find that with sufficient training data our machine learned observation operator leads to better assimilation than a projection operator using incorrectly inverted values. 
+
+\clearpage
